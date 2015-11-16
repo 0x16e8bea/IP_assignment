@@ -1,9 +1,14 @@
 <component name="libraryTable">
-  <library name="controlP5">
+  <library name="ControlP5">
     <CLASSES>
-      <root url="jar://$USER_HOME$/Documents/Processing/libraries/controlP5/library/controlP5.jar!/" />
+      <root url="file://$PROJECT_DIR$/lib_ext/controlP5/library" />
+      <root url="file://$PROJECT_DIR$/lib_ext/controlP5/library" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="file://$PROJECT_DIR$/lib_ext/controlP5/reference" />
+    </JAVADOC>
     <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/lib_ext/controlP5/library" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/lib_ext/controlP5/library" recursive="false" />
   </library>
 </component>

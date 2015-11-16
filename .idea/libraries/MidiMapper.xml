@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="MidiMapper">
+    <CLASSES />
+    <JAVADOC>
+      <root url="file://$PROJECT_DIR$/lib_ext/controlP5/reference" />
+      <root url="file://$PROJECT_DIR$/lib_ext/opencv_processing/reference" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/lib_ext/controlP5/examples/experimental/MidiMapper" />
+      <root url="file://$PROJECT_DIR$/lib_ext/controlP5/src" />
+      <root url="file://$PROJECT_DIR$/lib_ext/opencv_processing/src" />
+    </SOURCES>
+  </library>
+</component>
