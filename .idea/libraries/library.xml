@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="library">
+    <CLASSES>
+      <root url="file://C:/Program Files/processing-2.2.1/modes/java/libraries/serial/library" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://C:/Program Files/processing-2.2.1/modes/java/libraries/serial/library" />
+    </SOURCES>
+    <jarDirectory url="file://C:/Program Files/processing-2.2.1/modes/java/libraries/serial/library" recursive="false" />
+    <jarDirectory url="file://C:/Program Files/processing-2.2.1/modes/java/libraries/serial/library" recursive="false" type="SOURCES" />
+  </library>
+</component>

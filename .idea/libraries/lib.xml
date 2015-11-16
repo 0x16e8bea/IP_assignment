@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="file://C:/GStreamer/lib" />
+    </CLASSES>
+    <JAVADOC />
+    <NATIVE>
+      <root url="file://C:/GStreamer/lib" />
+    </NATIVE>
+    <SOURCES />
+    <jarDirectory url="file://C:/GStreamer/lib" recursive="false" />
+  </library>
+</component>
