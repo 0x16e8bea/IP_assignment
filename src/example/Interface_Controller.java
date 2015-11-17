@@ -23,6 +23,7 @@ public class Interface_Controller {
 
         cp5 = new ControlP5(pApplet);
 
+        cp5.begin(10,30);
         // Add interface components
         tab = cp5.addTab("WEBCAM");
 
@@ -45,9 +46,29 @@ public class Interface_Controller {
                 .linebreak()
         ;
 
+        cp5.addButton("exit_bt")
+                .setLabel("EXIT")
+                .setValue(0)
+                .linebreak()
+        ;
+
+        cp5.end();
+
+        cp5.begin(10,30);
+
+        cp5.addButton("calibrate_bt")
+                .setLabel("CALIBRATE")
+                .setValue(0)
+                .linebreak()
+        ;
+
+
         cp5.addToggle("toggle_cam_bt");
+        cp5.end();
 
         cp5.getController("toggle_cam_bt").moveTo("WEBCAM");
+        cp5.getController("calibrate_bt").moveTo("WEBCAM");
+
 
     }
 
