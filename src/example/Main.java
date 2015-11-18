@@ -4,6 +4,8 @@ import processing.core.*;
 import processing.video.*;
 import controlP5.*;
 
+import java.awt.*;
+
 public class Main extends PApplet {
 
     static boolean toggle_cam_bt = false;
@@ -29,19 +31,15 @@ public class Main extends PApplet {
 
         _interface.cam_handler(this);
 
+    }
 
+    public void controlEvent(ControlEvent theControlEvent) {
+        _interface.controlEvent(theControlEvent);
     }
 
     public void captureEvent(Capture c) {
         c.read();
     }
-
-    public void controlEvent(ControlEvent theControlEvent) {
-        if (theControlEvent.isFrom("sRange_R")) {
-            System.out.println("hello world");
-        }
-    }
-
 
     public void mousePressed() {
         _interface.webcam.mousePressed(mouseX, mouseY, mouseButton);

@@ -1,21 +1,16 @@
 package example;
 
-import java.awt.Frame;
-import java.awt.BorderLayout;
-
-import controlP5.ControlP5;
-import controlP5.Tab;
-import processing.core.PApplet;
-import processing.video.Capture;
-
 import java.awt.*;
+
+import controlP5.ControlEvent;
+import controlP5.ControlP5;
+import processing.core.PApplet;
 
 /**
  * Created by Mikkel on 15-Nov-15.
  */
 public class Interface_Controller {
 
-    Tab tab;
     Webcam_Handler webcam = new Webcam_Handler();
     ControlP5 cp5;
 
@@ -25,7 +20,25 @@ public class Interface_Controller {
 
         cp5.begin(10,30);
         // Add interface components
-        tab = cp5.addTab("WEBCAM");
+        cp5.getDefaultTab().setTitle("FILE");
+        cp5.addTab("WEBCAM");
+        cp5.addTab("SETTINGS");
+
+        cp5.getDefaultTab()
+                .activateEvent(true)
+                .setId(0)
+        ;
+
+        cp5.getTab("WEBCAM")
+                .activateEvent(true)
+                .setId(1)
+        ;
+
+        cp5.getTab("SETTINGS")
+                .activateEvent(true)
+                .setId(2)
+        ;
+
 
         // Add buttons to 'default'
         cp5.addButton("save_bt")
@@ -69,8 +82,8 @@ public class Interface_Controller {
         cp5.getController("toggle_cam_bt").moveTo("WEBCAM");
         cp5.getController("calibrate_bt").moveTo("WEBCAM");
 
-
     }
+
 
     public void cam_handler(PApplet pApplet) {
 
@@ -85,7 +98,21 @@ public class Interface_Controller {
             webcam.display(pApplet);
             webcam.draggable(pApplet);
         }
+    }
 
+    int id;
+
+    // Maybe this can be optimized ... but for now it works
+    public void controlEvent(ControlEvent theControlEvent) {
+        if (theControlEvent.isTab() && theControlEvent.getTab().isOpen() == true && theControlEvent.getId() == id) {
+            theControlEvent.getTab().close();
+            theControlEvent.getTab().setColorActive(new Color(0,45,90).getRGB());
+            id = theControlEvent.getId();
+        } else if (theControlEvent.getId() != id && theControlEvent.isTab() || theControlEvent.isTab() && theControlEvent.getTab().isOpen() == false) {
+            theControlEvent.getTab().open();
+            theControlEvent.getTab().setColorActive(new Color(0,170,255).getRGB());
+            id = theControlEvent.getId();
+        }
     }
 
     public ControlFrame addControlFrame(String theName, int theWidth, int theHeight) {
