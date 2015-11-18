@@ -11,7 +11,9 @@ import processing.core.PApplet;
  */
 public class Interface_Controller {
 
-    Webcam_Handler webcam = new Webcam_Handler();
+    Webcam_Window webcam = new Webcam_Window();
+    Output_Window output = new Output_Window();
+
     ControlP5 cp5;
 
     public void init(PApplet pApplet) {
@@ -76,16 +78,24 @@ public class Interface_Controller {
         ;
 
 
-        cp5.addToggle("toggle_cam_bt");
+        cp5.addToggle("toggle_cam_bt")
+            .setLabel("TOGGLE CAMERA")
+        ;
+
+        cp5.addToggle("toggle_out_bt")
+                .setLabel("TOGGLE OUTPUT")
+        ;
+
         cp5.end();
 
         cp5.getController("toggle_cam_bt").moveTo("WEBCAM");
+        cp5.getController("toggle_out_bt").moveTo("WEBCAM");
         cp5.getController("calibrate_bt").moveTo("WEBCAM");
 
     }
 
 
-    public void cam_handler(PApplet pApplet) {
+    public void window_handler(PApplet pApplet) {
 
         if (webcam.isActive == false && Main.toggle_cam_bt == true) {
             webcam.start(pApplet, 320, 240, 100, 100);
@@ -98,6 +108,17 @@ public class Interface_Controller {
             webcam.display(pApplet);
             webcam.draggable(pApplet);
         }
+
+        if (output.isActive == false && Main.toggle_out_bt == true) {
+            output.start(pApplet, 320, 240, 100, 100);
+            output.isActive = true;
+        }
+
+        if (Main.toggle_out_bt == true && webcam.isActive == true) {
+            output.display(pApplet, webcam.applyNormalize());
+            output.draggable(pApplet);
+        }
+
     }
 
     int id;
@@ -112,6 +133,10 @@ public class Interface_Controller {
             theControlEvent.getTab().open();
             theControlEvent.getTab().setColorActive(new Color(0,170,255).getRGB());
             id = theControlEvent.getId();
+        }
+
+        if (theControlEvent.isFrom("calibrate_bt") && webcam.isActive) {
+            webcam.applyNormalize();
         }
     }
 

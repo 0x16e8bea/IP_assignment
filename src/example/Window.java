@@ -11,6 +11,8 @@ public class Window {
     float alpha = 0;
     public int xCenter, yCenter;
 
+    boolean isActive = false;
+
     boolean animate = true;
     boolean overBox;
 
@@ -65,6 +67,7 @@ public class Window {
 
         xCenter = mouseX - (bx + bw/2);
         yCenter = mouseY - (by + bh/2);
+
     }
 
     public void mouseDragged(int mouseX, int mouseY, int button) {

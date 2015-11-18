@@ -1,16 +1,21 @@
 package example;
 
 import gab.opencv.OpenCV;
+import org.w3c.dom.css.RGBColor;
 import processing.core.*;
 import processing.video.*;
+
+import java.awt.*;
 
 /**
  * Created by Mikkel on 15-Nov-15.
  */
-public class Webcam_Handler extends Window {
+public class Webcam_Window extends Window {
 
     Capture video;
-    boolean isActive = false;
+
+    Point_Processing processP;
+    Neighbourhood_Processing processN = new Neighbourhood_Processing();
 
     public void start(PApplet pApplet, int vW, int vH, int x, int y) {
 
@@ -23,8 +28,15 @@ public class Webcam_Handler extends Window {
         video.start();
         isActive = true;
 
+        processP = new Point_Processing(video.pixels);
 
-        // Temporarily here because of a bug
+    }
+
+    public int[] applyNormalize() {
+
+        processP.normalize(video.pixels);
+
+        return processP.out;
 
     }
 

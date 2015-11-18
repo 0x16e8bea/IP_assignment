@@ -4,11 +4,10 @@ import processing.core.*;
 import processing.video.*;
 import controlP5.*;
 
-import java.awt.*;
-
 public class Main extends PApplet {
 
     static boolean toggle_cam_bt = false;
+    static boolean toggle_out_bt = false;
     static boolean locked = false;
 
     Interface_Controller _interface = new Interface_Controller();
@@ -29,7 +28,7 @@ public class Main extends PApplet {
         scale(2);
         popMatrix();
 
-        _interface.cam_handler(this);
+        _interface.window_handler(this);
 
     }
 
@@ -47,6 +46,7 @@ public class Main extends PApplet {
 
     public void mouseDragged() {
         _interface.webcam.mouseDragged(mouseX, mouseY, mouseButton);
+        _interface.output.mouseDragged(mouseX, mouseY, mouseButton);
 
     }
 
