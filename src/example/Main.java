@@ -28,7 +28,7 @@ public class Main extends PApplet {
         scale(2);
         popMatrix();
 
-        _interface.window_handler(this);
+        _interface.window_handler();
 
     }
 
@@ -40,11 +40,13 @@ public class Main extends PApplet {
         c.read();
     }
 
+    // Should be optimized
     public void mousePressed() {
         _interface.webcam.mousePressed(mouseX, mouseY, mouseButton);
         _interface.output.mousePressed(mouseX, mouseY, mouseButton);
     }
 
+    // Should be optimized
     public void mouseDragged() {
         _interface.webcam.mouseDragged(mouseX, mouseY, mouseButton);
         _interface.output.mouseDragged(mouseX, mouseY, mouseButton);

@@ -16,7 +16,20 @@ public class Interface_Controller {
 
     ControlP5 cp5;
 
+    PApplet pApplet;
+
+    // Threshold values
+    public static int sValue_R_min = 0;
+    public static int sValue_G_min = 0;
+    public static int sValue_B_min = 0;
+
+    public static int sValue_R_max = 255;
+    public static int sValue_G_max = 255;
+    public static int sValue_B_max = 255;
+
     public void init(PApplet pApplet) {
+
+        this.pApplet = pApplet;
 
         cp5 = new ControlP5(pApplet);
 
@@ -97,7 +110,7 @@ public class Interface_Controller {
     }
 
 
-    public void window_handler(PApplet pApplet) {
+    public void window_handler() {
 
         if (webcam.isActive == false && Main.toggle_cam_bt == true) {
             webcam.start(pApplet, 320, 240, 100, 100);
