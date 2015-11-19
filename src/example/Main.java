@@ -4,6 +4,8 @@ import processing.core.*;
 import processing.video.*;
 import controlP5.*;
 
+import java.util.concurrent.ExecutionException;
+
 public class Main extends PApplet {
 
     //static boolean locked = false;
@@ -26,11 +28,17 @@ public class Main extends PApplet {
         scale(2);
         popMatrix();
 
-        _interface.window_handler();
+        try {
+            _interface.window_handler();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
     }
 
-    public void controlEvent(ControlEvent theControlEvent) {
+    public void controlEvent(ControlEvent theControlEvent) throws ExecutionException, InterruptedException {
 
         _interface.controlEvent(theControlEvent);
     }

@@ -7,20 +7,16 @@ package example;
 import processing.video.Capture;
 
 import java.awt.*;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.FutureTask;
+import java.util.concurrent.RunnableFuture;
 
 public class Image_Processing {
 
     int[] out;
     Color[] c;
-    int vW, vH;
-
-    // Threshold values
-    public int sValue_R_min = 0;
-    public int sValue_G_min = 0;
-    public int sValue_B_min = 0;
-    public int sValue_R_max = 255;
-    public int sValue_G_max = 255;
-    public int sValue_B_max = 255;
+    final int vW, vH;
 
     Image_Processing(Capture video) {
         this.c = new Color[video.pixels.length];
@@ -28,6 +24,7 @@ public class Image_Processing {
         this.vH = video.height;
     }
 
+    //region POINT_PROCESSING
     public void convertToRGB(int[] c) {
 
         for (int i = 0; i < c.length; i++) {
@@ -44,7 +41,7 @@ public class Image_Processing {
         return this;
     }
 
-    public Image_Processing normalize() {
+        public Image_Processing normalize() {
 
         convertToRGB(this.out);
         for (int i = 0; i < this.out.length; i++) {
@@ -66,18 +63,27 @@ public class Image_Processing {
         return this;
     }
 
+    // Threshold values
+    public int sValue_R_min = 0;
+    public int sValue_R_max = 255;
+    public int sValue_G_min = 0;
+    public int sValue_G_max = 255;
+    public int sValue_B_min = 0;
+    public int sValue_B_max = 255;
+
     public Image_Processing threshold() {
 
         convertToRGB(this.out);
 
         for (int i = 0; i < c.length; i++) {
             if (
-                    this.c[i].getRed() >= 0
-                            && this.c[i].getRed() <= 255
-                            && this.c[i].getGreen() >= 50
-                            && this.c[i].getGreen() <= 100
-                            && this.c[i].getBlue() >= 20
-                            && this.c[i].getBlue() <= 150) {
+                            this.c[i].getRed()      >=  sValue_R_min
+                            && this.c[i].getRed()   <  sValue_R_max
+                            && this.c[i].getGreen() >=  sValue_G_min
+                            && this.c[i].getGreen() <  sValue_G_max
+                            && this.c[i].getBlue()  >=  sValue_B_min
+                            && this.c[i].getBlue()  <  sValue_B_max
+                    ) {
                 this.out[i] = Color.white.getRGB();
             } else
                 this.out[i] = Color.black.getRGB();
@@ -85,42 +91,74 @@ public class Image_Processing {
         return this;
     }
 
-    public Image_Processing erosion() {
+    public Image_Processing threshold(int offset, int r, int g, int b) {
 
-        convertToRGB(this.out);
+        this.sValue_R_min = r - offset;
+        this.sValue_R_max = r + offset;
+        this.sValue_G_min = g - offset;
+        this.sValue_G_max = g + offset;
+        this.sValue_B_min = b - offset;
+        this.sValue_B_max = b + offset;
 
-        for (int j = 1; j < vH - 1; j++) {
-            for (int i = 1; i < vW - 1; i++) {
+        threshold();
 
-                int sum = 0;
+        return this;
 
-                for (int kx = -1; kx <= 1; kx++) {
-                    for (int ky = -1; ky <= 1; ky++) {
-                        sum += this.c[(i + kx) + (j * vW) + (ky * vW)].getRed();
+    }
+
+        //endregion
+
+    //region NEIGHBOURHOOD_PROCESSING
+    public Image_Processing erosion(final int radius) throws ExecutionException, InterruptedException {
+
+        RunnableFuture f = new FutureTask(new Callable<int[]>() {
+            @Override
+            public int[] call() throws Exception {
+                convertToRGB(out);
+
+                for (int j = radius/2; j < vH - radius/2; j++) {
+                    for (int i = radius/2; i < vW - radius/2; i++) {
+
+                        int sum = 0;
+
+                        for (int kx = -radius/2; kx <= radius/2; kx++) {
+                            for (int ky = -radius/2; ky <= radius/2; ky++) {
+                                sum += c[(i + kx) + (j * vW) + (ky * vW)].getRed();
+                            }
+                        }
+
+                        if (sum >= 255 * Math.pow(radius,2)) {
+                            out[i + j * vW] = Color.white.getRGB();
+                        }
+                        else
+                            out[i + j * vW] = Color.black.getRGB();
                     }
                 }
-
-                if (sum < 255 * 9)
-                    this.out[i + j * vW] = Color.white.getRGB();
-                else
-                    this.out[i + j * vW] = Color.black.getRGB();
+                return out;
             }
-        }
+            // implement call
+        });
+
+        new Thread(f).start();
+
+        this.out = (int[])f.get();
+
+
 
         return this;
     }
 
-    public Image_Processing dilation() {
+    public Image_Processing dilation(int radius) {
 
         convertToRGB(this.out);
 
-        for (int j = 1; j < vH - 1; j++) {
-            for (int i = 1; i < vW - 1; i++) {
+        for (int j = radius/2; j < vH - radius/2; j++) {
+            for (int i = radius/2; i < vW - radius/2; i++) {
 
                 int sum = 0;
 
-                for (int kx = -1; kx <= 1; kx++) {
-                    for (int ky = -1; ky <= 1; ky++) {
+                for (int kx = -radius/2; kx <= radius/2; kx++) {
+                    for (int ky = -radius/2; ky <= radius/2; ky++) {
                         sum += this.c[(i + kx) + (j * vW) + (ky * vW)].getRed();
                     }
                 }
@@ -134,4 +172,7 @@ public class Image_Processing {
 
         return this;
     }
+
+    //endregion
+
 }

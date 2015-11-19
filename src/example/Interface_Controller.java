@@ -1,6 +1,7 @@
 package example;
 
 import java.awt.*;
+import java.util.concurrent.ExecutionException;
 
 import controlP5.ControlEvent;
 import controlP5.ControlP5;
@@ -132,7 +133,7 @@ public class Interface_Controller {
 
     }
 
-    public void window_handler() {
+    public void window_handler() throws ExecutionException, InterruptedException {
 
         if (webcam.isActive == false && toggle_cam_bt == true) {
             webcam.start(pApplet, 320, 240, 100, 100);
@@ -152,13 +153,13 @@ public class Interface_Controller {
         }
 
         if (toggle_out_bt == true && webcam.isActive == true) {
-            output.display(pApplet, webcam.applyNormalize());
+            output.display(pApplet, webcam.applyFilters());
             output.draggable(pApplet);
         }
 
     }
 
-    public void controlEvent(ControlEvent theControlEvent) {
+    public void controlEvent(ControlEvent theControlEvent) throws ExecutionException, InterruptedException {
         if (theControlEvent.isTab() && theControlEvent.getTab().isOpen() == true && theControlEvent.getId() == id) {
             theControlEvent.getTab().close();
             theControlEvent.getTab().setColorActive(new Color(0, 45, 90).getRGB());
@@ -170,7 +171,7 @@ public class Interface_Controller {
         }
 
         if (theControlEvent.isFrom("calibrate_bt") && webcam.isActive) {
-            webcam.applyNormalize();
+            webcam.applyFilters();
         }
 
         if (theControlEvent.isFrom("toggle_cam_bt")) {
