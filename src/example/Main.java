@@ -7,12 +7,13 @@ import controlP5.*;
 public class Main extends PApplet {
 
     static boolean toggle_cam_bt = false;
+    static boolean toggle_out_bt = false;
     static boolean locked = false;
 
     Interface_Controller _interface = new Interface_Controller();
 
     public void setup() {
-        size(640, 480);
+        size(800, 600);
         noFill();
 
         // ControlP5
@@ -27,28 +28,28 @@ public class Main extends PApplet {
         scale(2);
         popMatrix();
 
-        _interface.cam_handler(this);
+        _interface.window_handler();
 
+    }
 
+    public void controlEvent(ControlEvent theControlEvent) {
+        _interface.controlEvent(theControlEvent);
     }
 
     public void captureEvent(Capture c) {
         c.read();
     }
 
-    public void controlEvent(ControlEvent theControlEvent) {
-        if (theControlEvent.isFrom("sRange_R")) {
-            System.out.println("hello world");
-        }
-    }
-
-
+    // Should be optimized
     public void mousePressed() {
         _interface.webcam.mousePressed(mouseX, mouseY, mouseButton);
+        _interface.output.mousePressed(mouseX, mouseY, mouseButton);
     }
 
+    // Should be optimized
     public void mouseDragged() {
         _interface.webcam.mouseDragged(mouseX, mouseY, mouseButton);
+        _interface.output.mouseDragged(mouseX, mouseY, mouseButton);
 
     }
 

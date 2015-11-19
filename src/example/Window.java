@@ -11,17 +11,35 @@ public class Window {
     float alpha = 0;
     public int xCenter, yCenter;
 
+    boolean isActive = false;
+
+    boolean animate = true;
     boolean overBox;
 
     public void draggable(PApplet pApplet) {
         pApplet.pushStyle();
 
-        pApplet.stroke(0, 170, 255);
-
         if (pApplet.mouseX > bx && pApplet.mouseX < bx + bw &&
                 pApplet.mouseY > by && pApplet.mouseY < by + bh) {
-
             overBox = true;
+        } else {
+            overBox = false;
+        }
+
+        pApplet.stroke(0, 170, 255);
+
+        if (animate == true)
+        animate(pApplet);
+
+            // Draw the box
+            pApplet.rect(bx, by, bw, bh);
+            pApplet.popStyle();
+
+    }
+
+    public void animate(PApplet pApplet) {
+
+        if (overBox == true) {
             if (!Main.locked) {
                 if (alpha < 50)
                     alpha += 4;
@@ -39,23 +57,17 @@ public class Window {
         if (pApplet.mousePressed == true && overBox == true) {
             if(alpha < 150)
                 alpha += 8;
-            } else if (pApplet.mousePressed == false && overBox == true) {
+        } else if (pApplet.mousePressed == false && overBox == true) {
             if(alpha > 50)
                 alpha -= 1 + alpha/10;
-            }
-
-
-
-            // Draw the box
-            pApplet.rect(bx, by, bw, bh);
-            pApplet.popStyle();
-
+        }
     }
 
     public void mousePressed(int mouseX, int mouseY, int button) {
 
         xCenter = mouseX - (bx + bw/2);
         yCenter = mouseY - (by + bh/2);
+
     }
 
     public void mouseDragged(int mouseX, int mouseY, int button) {

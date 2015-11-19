@@ -1,16 +1,16 @@
 package example;
 
-import gab.opencv.OpenCV;
 import processing.core.*;
 import processing.video.*;
 
 /**
  * Created by Mikkel on 15-Nov-15.
  */
-public class Webcam_Handler extends Window {
+public class Webcam_Window extends Window {
 
     Capture video;
-    boolean isActive = false;
+
+    Image_Processing processImg;
 
     public void start(PApplet pApplet, int vW, int vH, int x, int y) {
 
@@ -23,8 +23,20 @@ public class Webcam_Handler extends Window {
         video.start();
         isActive = true;
 
+        processImg = new Image_Processing(video);
 
-        // Temporarily here because of a bug
+    }
+
+    public int[] applyNormalize() {
+
+        processImg.run(video.pixels)
+                .normalize()
+                .threshold()
+                .erosion()
+                .dilation()
+        ;
+
+        return processImg.out;
 
     }
 
