@@ -17,7 +17,7 @@ public class Output_Window extends Window {
         this.bx = x;
         this.by = y;
 
-        img = new PImage(vW,vH);
+        img = new PImage(vW, vH);
     }
 
     public void display(PApplet applet, int[] c) {

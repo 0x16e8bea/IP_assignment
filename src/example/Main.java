@@ -6,9 +6,7 @@ import controlP5.*;
 
 public class Main extends PApplet {
 
-    static boolean toggle_cam_bt = false;
-    static boolean toggle_out_bt = false;
-    static boolean locked = false;
+    //static boolean locked = false;
 
     Interface_Controller _interface = new Interface_Controller();
 
@@ -33,6 +31,7 @@ public class Main extends PApplet {
     }
 
     public void controlEvent(ControlEvent theControlEvent) {
+
         _interface.controlEvent(theControlEvent);
     }
 
@@ -42,19 +41,22 @@ public class Main extends PApplet {
 
     // Should be optimized
     public void mousePressed() {
-        _interface.webcam.mousePressed(mouseX, mouseY, mouseButton);
-        _interface.output.mousePressed(mouseX, mouseY, mouseButton);
+        _interface.webcam.mousePressed(mouseX, mouseY);
+        _interface.output.mousePressed(mouseX, mouseY);
     }
 
     // Should be optimized
     public void mouseDragged() {
-        _interface.webcam.mouseDragged(mouseX, mouseY, mouseButton);
-        _interface.output.mouseDragged(mouseX, mouseY, mouseButton);
+        _interface.webcam.mouseDragged(mouseX, mouseY);
+        _interface.output.mouseDragged(mouseX, mouseY);
 
     }
 
     public void mouseReleased() {
-        locked = false;
+        _interface.webcam.mouseReleased();
+        _interface.output.mouseReleased();
+
+        //locked = false;
     }
 
 }

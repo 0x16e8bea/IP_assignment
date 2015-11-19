@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="505a5d02-7a9c-4dff-948d-597d791457fe" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\Users\Mikkel\IdeaProjects\IP assignment\out\production\IP assignment\example\Neighbourhood_Processing.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Mikkel\IdeaProjects\IP assignment\src\example\Neighbourhood_Processing.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IP assignment/example/Interface_Controller.class" afterPath="$PROJECT_DIR$/out/production/IP assignment/example/Interface_Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IP assignment/example/Main.class" afterPath="$PROJECT_DIR$/out/production/IP assignment/example/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IP assignment/example/Neighbourhood_Processing.class" afterPath="$PROJECT_DIR$/out/production/IP assignment/example/Neighbourhood_Processing.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IP assignment/example/Window.class" afterPath="$PROJECT_DIR$/out/production/IP assignment/example/Window.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/example/Image_Processing.java" afterPath="$PROJECT_DIR$/src/example/Image_Processing.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/example/Interface_Controller.java" afterPath="$PROJECT_DIR$/src/example/Interface_Controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/example/Main.java" afterPath="$PROJECT_DIR$/src/example/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/example/Output_Window.java" afterPath="$PROJECT_DIR$/src/example/Output_Window.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/example/Webcam_Window.java" afterPath="$PROJECT_DIR$/src/example/Webcam_Window.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/example/Window.java" afterPath="$PROJECT_DIR$/src/example/Window.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="IP assignment.iws" />
@@ -36,25 +41,11 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/example/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1071">
-              <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+            <state vertical-scroll-proportion="-4.1034484" vertical-offset="0" max-vertical-offset="1105">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#668#669#0" expanded="true" />
-                <element signature="e#724#725#0" expanded="true" />
-                <element signature="e#767#768#0" expanded="true" />
-                <element signature="e#791#792#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Color.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/src.zip!/java/awt/Color.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3318" max-vertical-offset="20417">
-              <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -62,10 +53,20 @@
       <file leaf-file-name="Interface_Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/example/Interface_Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2239" max-vertical-offset="2992">
-              <caret line="153" column="36" selection-start-line="153" selection-start-column="36" selection-end-line="153" selection-end-column="36" />
+            <state vertical-scroll-proportion="-14.034483" vertical-offset="205" max-vertical-offset="782">
+              <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="n#!!doc;n#pApplet#0;n#Interface_Controller#0" expanded="false" />
+                <element signature="n#!!doc;n#id#0;n#Interface_Controller#0" expanded="false" />
+                <element signature="e#629#642#0" expanded="false" />
+                <element signature="e#1126#1151#0" expanded="false" />
+                <element signature="e#1780#1804#0" expanded="false" />
+                <element signature="e#2272#2298#0" expanded="false" />
+                <element signature="e#2624#2649#0" expanded="false" />
+                <element signature="method#window_handler#0;class#Interface_Controller#0" expanded="false" />
+                <element signature="method#controlEvent#0;class#Interface_Controller#0" expanded="false" />
+                <element signature="method#addControlFrame#0;class#Interface_Controller#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -74,8 +75,8 @@
       <file leaf-file-name="Webcam_Window.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/example/Webcam_Window.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7893864" vertical-offset="102" max-vertical-offset="952">
-              <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.05923345" vertical-offset="102" max-vertical-offset="884">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -84,7 +85,7 @@
       <file leaf-file-name="Output_Window.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/example/Output_Window.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="697">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
               <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
               <folding />
             </state>
@@ -94,20 +95,8 @@
       <file leaf-file-name="Image_Processing.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/example/Image_Processing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1403" max-vertical-offset="2312">
-              <caret line="105" column="30" selection-start-line="105" selection-start-column="30" selection-end-line="105" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Neighbourhood_Processing.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/example/Neighbourhood_Processing.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="19" selection-end-column="31" />
+            <state vertical-scroll-proportion="-12.896552" vertical-offset="0" max-vertical-offset="2431">
+              <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -118,9 +107,14 @@
       <file leaf-file-name="Window.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/example/Window.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1479">
-              <caret line="18" column="41" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="41" />
-              <folding />
+            <state vertical-scroll-proportion="-6.8965516" vertical-offset="55" max-vertical-offset="833">
+              <caret line="15" column="21" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding>
+                <element signature="method#draggable#0;class#Window#0" expanded="false" />
+                <element signature="method#animate#0;class#Window#0" expanded="false" />
+                <element signature="e#1834#1835#0" expanded="true" />
+                <element signature="e#1864#1865#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -128,7 +122,7 @@
       <file leaf-file-name="ControlFrame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/example/ControlFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="94" max-vertical-offset="799">
+            <state vertical-scroll-proportion="0.0" vertical-offset="196" max-vertical-offset="799">
               <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
               <folding>
                 <element signature="e#861#862#0" expanded="true" />
@@ -154,14 +148,15 @@
         <option value="$PROJECT_DIR$/src/example/ControlFrame.java" />
         <option value="$PROJECT_DIR$/src/example/Webcam_Handler.java" />
         <option value="$PROJECT_DIR$/src/example/Output_Handler.java" />
-        <option value="$PROJECT_DIR$/src/example/Window.java" />
         <option value="$PROJECT_DIR$/src/example/Output_Window.java" />
-        <option value="$PROJECT_DIR$/src/example/Main.java" />
-        <option value="$PROJECT_DIR$/src/example/Interface_Controller.java" />
         <option value="$PROJECT_DIR$/src/example/Neighbourhood_Processing.java" />
         <option value="$PROJECT_DIR$/src/example/Point_Processing.java" />
-        <option value="$PROJECT_DIR$/src/example/Image_Processing.java" />
         <option value="$PROJECT_DIR$/src/example/Webcam_Window.java" />
+        <option value="$PROJECT_DIR$/src/example/Draw_Window.java" />
+        <option value="$PROJECT_DIR$/src/example/Window.java" />
+        <option value="$PROJECT_DIR$/src/example/Image_Processing.java" />
+        <option value="$PROJECT_DIR$/src/example/Main.java" />
+        <option value="$PROJECT_DIR$/src/example/Interface_Controller.java" />
       </list>
     </option>
   </component>
@@ -199,6 +194,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -241,7 +237,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -554,6 +549,8 @@
       <workItem from="1447661954736" duration="159000" />
       <workItem from="1447662170491" duration="6305000" />
       <workItem from="1447859844058" duration="23911000" />
+      <workItem from="1447898857466" duration="1660000" />
+      <workItem from="1447952435130" duration="6199000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed button layout and added exit and calibrate-buttons which closes #6">
       <created>1447726637190</created>
@@ -589,7 +586,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61545000" />
+    <option name="totallyTimeSpent" value="69404000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -613,7 +610,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976446" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -625,13 +622,13 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976446" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="1314" y="409" width="541" height="329" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="1277" y="427" width="541" height="329" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976446" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32441112" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976446" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1380597" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1380597" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -705,7 +702,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/example/Main.java</url>
+          <line>58</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -714,16 +719,140 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/example/Webcam_Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/example/Output_Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="697">
+          <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/example/Image_Processing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1632" max-vertical-offset="2295">
+          <caret line="126" column="18" selection-start-line="126" selection-start-column="18" selection-end-line="126" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/example/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1462">
+          <caret line="17" column="41" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="41" />
+          <folding>
+            <element signature="method#draggable#0;class#Window#0" expanded="false" />
+            <element signature="method#animate#0;class#Window#0" expanded="false" />
+            <element signature="e#1834#1835#0" expanded="true" />
+            <element signature="e#1864#1865#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/example/ControlFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="94" max-vertical-offset="799">
+          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+          <folding>
+            <element signature="e#861#862#0" expanded="true" />
+            <element signature="e#892#893#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/src.zip!/java/awt/Color.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3318" max-vertical-offset="20417">
+          <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/example/Interface_Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2239" max-vertical-offset="2992">
+          <caret line="153" column="36" selection-start-line="153" selection-start-column="36" selection-end-line="153" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="n#!!doc;n#pApplet#0;n#Interface_Controller#0" expanded="false" />
+            <element signature="n#!!doc;n#id#0;n#Interface_Controller#0" expanded="false" />
+            <element signature="e#629#642#0" expanded="false" />
+            <element signature="e#1126#1151#0" expanded="false" />
+            <element signature="e#1780#1804#0" expanded="false" />
+            <element signature="e#2272#2298#0" expanded="false" />
+            <element signature="e#2624#2649#0" expanded="false" />
+            <element signature="method#window_handler#0;class#Interface_Controller#0" expanded="false" />
+            <element signature="method#controlEvent#0;class#Interface_Controller#0" expanded="false" />
+            <element signature="method#addControlFrame#0;class#Interface_Controller#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/example/Webcam_Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/example/Output_Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="697">
+          <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/example/Image_Processing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1403" max-vertical-offset="2312">
+          <caret line="105" column="30" selection-start-line="105" selection-start-column="30" selection-end-line="105" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/example/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1479">
+          <caret line="18" column="41" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="41" />
+          <folding>
+            <element signature="method#draggable#0;class#Window#0" expanded="false" />
+            <element signature="method#animate#0;class#Window#0" expanded="false" />
+            <element signature="e#1834#1835#0" expanded="true" />
+            <element signature="e#1864#1865#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/example/ControlFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="94" max-vertical-offset="799">
+          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+          <folding>
+            <element signature="e#861#862#0" expanded="true" />
+            <element signature="e#892#893#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/example/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#668#669#0" expanded="true" />
-            <element signature="e#724#725#0" expanded="true" />
-            <element signature="e#767#768#0" expanded="true" />
-            <element signature="e#791#792#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -746,22 +875,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/example/Neighbourhood_Processing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="221">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/example/Interface_Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="947" max-vertical-offset="1853">
           <caret line="56" column="21" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="n#!!doc;n#pApplet#0;n#Interface_Controller#0" expanded="false" />
+            <element signature="n#!!doc;n#id#0;n#Interface_Controller#0" expanded="false" />
+            <element signature="e#629#642#0" expanded="false" />
+            <element signature="e#1126#1151#0" expanded="false" />
+            <element signature="e#1780#1804#0" expanded="false" />
+            <element signature="e#2272#2298#0" expanded="false" />
+            <element signature="e#2624#2649#0" expanded="false" />
+            <element signature="method#window_handler#0;class#Interface_Controller#0" expanded="false" />
+            <element signature="method#controlEvent#0;class#Interface_Controller#0" expanded="false" />
+            <element signature="method#addControlFrame#0;class#Interface_Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -770,7 +899,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="347" max-vertical-offset="1275">
           <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="36" />
-          <folding />
+          <folding>
+            <element signature="method#draggable#0;class#Window#0" expanded="false" />
+            <element signature="method#animate#0;class#Window#0" expanded="false" />
+            <element signature="e#1834#1835#0" expanded="true" />
+            <element signature="e#1864#1865#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -791,10 +925,6 @@
           <caret line="64" column="39" selection-start-line="64" selection-start-column="39" selection-end-line="64" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#668#669#0" expanded="true" />
-            <element signature="e#724#725#0" expanded="true" />
-            <element signature="e#767#768#0" expanded="true" />
-            <element signature="e#791#792#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -817,22 +947,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/example/Neighbourhood_Processing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="221">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/example/Interface_Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="884" max-vertical-offset="1360">
           <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="n#!!doc;n#pApplet#0;n#Interface_Controller#0" expanded="false" />
+            <element signature="n#!!doc;n#id#0;n#Interface_Controller#0" expanded="false" />
+            <element signature="e#629#642#0" expanded="false" />
+            <element signature="e#1126#1151#0" expanded="false" />
+            <element signature="e#1780#1804#0" expanded="false" />
+            <element signature="e#2272#2298#0" expanded="false" />
+            <element signature="e#2624#2649#0" expanded="false" />
+            <element signature="method#window_handler#0;class#Interface_Controller#0" expanded="false" />
+            <element signature="method#controlEvent#0;class#Interface_Controller#0" expanded="false" />
+            <element signature="method#addControlFrame#0;class#Interface_Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -841,7 +971,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#draggable#0;class#Window#0" expanded="false" />
+            <element signature="method#animate#0;class#Window#0" expanded="false" />
+            <element signature="e#1834#1835#0" expanded="true" />
+            <element signature="e#1864#1865#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -862,10 +997,6 @@
           <caret line="64" column="39" selection-start-line="64" selection-start-column="39" selection-end-line="64" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#668#669#0" expanded="true" />
-            <element signature="e#724#725#0" expanded="true" />
-            <element signature="e#767#768#0" expanded="true" />
-            <element signature="e#791#792#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -888,22 +1019,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/example/Neighbourhood_Processing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="221">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/example/Interface_Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="884" max-vertical-offset="1360">
           <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="n#!!doc;n#pApplet#0;n#Interface_Controller#0" expanded="false" />
+            <element signature="n#!!doc;n#id#0;n#Interface_Controller#0" expanded="false" />
+            <element signature="e#629#642#0" expanded="false" />
+            <element signature="e#1126#1151#0" expanded="false" />
+            <element signature="e#1780#1804#0" expanded="false" />
+            <element signature="e#2272#2298#0" expanded="false" />
+            <element signature="e#2624#2649#0" expanded="false" />
+            <element signature="method#window_handler#0;class#Interface_Controller#0" expanded="false" />
+            <element signature="method#controlEvent#0;class#Interface_Controller#0" expanded="false" />
+            <element signature="method#addControlFrame#0;class#Interface_Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -912,7 +1043,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#draggable#0;class#Window#0" expanded="false" />
+            <element signature="method#animate#0;class#Window#0" expanded="false" />
+            <element signature="e#1834#1835#0" expanded="true" />
+            <element signature="e#1864#1865#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -933,10 +1069,6 @@
           <caret line="64" column="39" selection-start-line="64" selection-start-column="39" selection-end-line="64" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#668#669#0" expanded="true" />
-            <element signature="e#724#725#0" expanded="true" />
-            <element signature="e#767#768#0" expanded="true" />
-            <element signature="e#791#792#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -959,22 +1091,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/example/Neighbourhood_Processing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="221">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/example/Interface_Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1496">
           <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="n#!!doc;n#pApplet#0;n#Interface_Controller#0" expanded="false" />
+            <element signature="n#!!doc;n#id#0;n#Interface_Controller#0" expanded="false" />
+            <element signature="e#629#642#0" expanded="false" />
+            <element signature="e#1126#1151#0" expanded="false" />
+            <element signature="e#1780#1804#0" expanded="false" />
+            <element signature="e#2272#2298#0" expanded="false" />
+            <element signature="e#2624#2649#0" expanded="false" />
+            <element signature="method#window_handler#0;class#Interface_Controller#0" expanded="false" />
+            <element signature="method#controlEvent#0;class#Interface_Controller#0" expanded="false" />
+            <element signature="method#addControlFrame#0;class#Interface_Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -983,7 +1115,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#draggable#0;class#Window#0" expanded="false" />
+            <element signature="method#animate#0;class#Window#0" expanded="false" />
+            <element signature="e#1834#1835#0" expanded="true" />
+            <element signature="e#1864#1865#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1070,7 +1207,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3085" max-vertical-offset="18972">
           <caret line="239" column="0" selection-start-line="239" selection-start-column="0" selection-end-line="239" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1078,75 +1214,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.68" vertical-offset="34845" max-vertical-offset="112132">
           <caret line="2360" column="0" selection-start-line="2360" selection-start-column="0" selection-end-line="2360" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/example/ControlFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="850">
-          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
-          <folding>
-            <element signature="e#861#862#0" expanded="true" />
-            <element signature="e#892#893#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/example/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1071">
-          <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#668#669#0" expanded="true" />
-            <element signature="e#724#725#0" expanded="true" />
-            <element signature="e#767#768#0" expanded="true" />
-            <element signature="e#791#792#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/example/Window.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1479">
-          <caret line="18" column="41" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/src.zip!/java/awt/Color.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3318" max-vertical-offset="20417">
+        <state vertical-scroll-proportion="-0.0049751243" vertical-offset="3318" max-vertical-offset="20417">
           <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/example/Neighbourhood_Processing.java">
+    <entry file="file://$PROJECT_DIR$/src/example/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="19" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/example/Interface_Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2239" max-vertical-offset="2992">
-          <caret line="153" column="36" selection-start-line="153" selection-start-column="36" selection-end-line="153" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/example/Image_Processing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1403" max-vertical-offset="2312">
-          <caret line="105" column="30" selection-start-line="105" selection-start-column="30" selection-end-line="105" selection-end-column="30" />
+        <state vertical-scroll-proportion="-4.1034484" vertical-offset="0" max-vertical-offset="1105">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1161,11 +1243,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/example/Image_Processing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.896552" vertical-offset="0" max-vertical-offset="2431">
+          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/example/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.8965516" vertical-offset="55" max-vertical-offset="833">
+          <caret line="15" column="21" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="method#draggable#0;class#Window#0" expanded="false" />
+            <element signature="method#animate#0;class#Window#0" expanded="false" />
+            <element signature="e#1834#1835#0" expanded="true" />
+            <element signature="e#1864#1865#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/example/ControlFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="850">
+          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+          <folding>
+            <element signature="e#861#862#0" expanded="true" />
+            <element signature="e#892#893#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/example/Webcam_Window.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7893864" vertical-offset="102" max-vertical-offset="952">
-          <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.05923345" vertical-offset="102" max-vertical-offset="884">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/example/Interface_Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.034483" vertical-offset="205" max-vertical-offset="782">
+          <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="n#!!doc;n#pApplet#0;n#Interface_Controller#0" expanded="false" />
+            <element signature="n#!!doc;n#id#0;n#Interface_Controller#0" expanded="false" />
+            <element signature="e#629#642#0" expanded="false" />
+            <element signature="e#1126#1151#0" expanded="false" />
+            <element signature="e#1780#1804#0" expanded="false" />
+            <element signature="e#2272#2298#0" expanded="false" />
+            <element signature="e#2624#2649#0" expanded="false" />
+            <element signature="method#window_handler#0;class#Interface_Controller#0" expanded="false" />
+            <element signature="method#controlEvent#0;class#Interface_Controller#0" expanded="false" />
+            <element signature="method#addControlFrame#0;class#Interface_Controller#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -11,29 +11,27 @@ import processing.core.PApplet;
  */
 public class Interface_Controller {
 
-    Webcam_Window webcam = new Webcam_Window();
-    Output_Window output = new Output_Window();
-
+    //region OBJECTS
+    PApplet pApplet;
     ControlP5 cp5;
 
-    PApplet pApplet;
+    Webcam_Window webcam = new Webcam_Window();
+    Output_Window output = new Output_Window();
+    //endregion
 
-    // Threshold values
-    public static int sValue_R_min = 0;
-    public static int sValue_G_min = 0;
-    public static int sValue_B_min = 0;
+    //region PRIMITIVES
+    int id;
 
-    public static int sValue_R_max = 255;
-    public static int sValue_G_max = 255;
-    public static int sValue_B_max = 255;
+    boolean toggle_cam_bt = false;
+    boolean toggle_out_bt = false;
+    //endregion
 
     public void init(PApplet pApplet) {
 
         this.pApplet = pApplet;
-
         cp5 = new ControlP5(pApplet);
 
-        cp5.begin(10,30);
+        //region TABS
         // Add interface components
         cp5.getDefaultTab().setTitle("FILE");
         cp5.addTab("WEBCAM");
@@ -53,9 +51,11 @@ public class Interface_Controller {
                 .activateEvent(true)
                 .setId(2)
         ;
+        //endregion
 
+        //region DEFAULT_TAB_CTRL
+        cp5.begin(10, 30);
 
-        // Add buttons to 'default'
         cp5.addButton("save_bt")
                 .setLabel("SAVE")
                 .setValue(0)
@@ -81,8 +81,10 @@ public class Interface_Controller {
         ;
 
         cp5.end();
+        //endregion[s
 
-        cp5.begin(10,30);
+        //region WEBCAM_TAB_CTRL
+        cp5.begin(10, 30);
 
         cp5.addButton("calibrate_bt")
                 .setLabel("CALIBRATE")
@@ -92,7 +94,7 @@ public class Interface_Controller {
 
 
         cp5.addToggle("toggle_cam_bt")
-            .setLabel("TOGGLE CAMERA")
+                .setLabel("TOGGLE CAMERA")
                 .linebreak()
         ;
 
@@ -102,56 +104,81 @@ public class Interface_Controller {
         ;
 
         cp5.end();
+        //endregion
 
+        //region SETTINGS_TAB_CTRL
+        cp5.begin(10, 30);
+
+        cp5.addToggle("toggle_frameRate_bt")
+                .setLabel("FRAME RATE")
+                .linebreak()
+        ;
+
+        cp5.addToggle("toggle_animation_bt")
+                .setLabel("ANIMATION")
+                .linebreak()
+        ;
+
+        cp5.end();
+        //endregion
+
+        //region ARRANGE_TAB_CTRL
         cp5.getController("toggle_cam_bt").moveTo("WEBCAM");
         cp5.getController("toggle_out_bt").moveTo("WEBCAM");
         cp5.getController("calibrate_bt").moveTo("WEBCAM");
+        cp5.getController("toggle_frameRate_bt").moveTo("SETTINGS");
+        cp5.getController("toggle_animation_bt").moveTo("SETTINGS");
+        //endregion
 
     }
 
-
     public void window_handler() {
 
-        if (webcam.isActive == false && Main.toggle_cam_bt == true) {
+        if (webcam.isActive == false && toggle_cam_bt == true) {
             webcam.start(pApplet, 320, 240, 100, 100);
-        } else if (webcam.isActive == true && Main.toggle_cam_bt == false) {
+        } else if (webcam.isActive == true && toggle_cam_bt == false) {
             webcam.video.stop();
             webcam.isActive = false;
         }
 
-        if (Main.toggle_cam_bt == true) {
+        if (toggle_cam_bt == true) {
             webcam.display(pApplet);
             webcam.draggable(pApplet);
         }
 
-        if (output.isActive == false && Main.toggle_out_bt == true) {
+        if (output.isActive == false && toggle_out_bt == true) {
             output.start(pApplet, 320, 240, 100, 100);
             output.isActive = true;
         }
 
-        if (Main.toggle_out_bt == true && webcam.isActive == true) {
+        if (toggle_out_bt == true && webcam.isActive == true) {
             output.display(pApplet, webcam.applyNormalize());
             output.draggable(pApplet);
         }
 
     }
 
-    int id;
-
-    // Maybe this can be optimized ... but for now it works
     public void controlEvent(ControlEvent theControlEvent) {
         if (theControlEvent.isTab() && theControlEvent.getTab().isOpen() == true && theControlEvent.getId() == id) {
             theControlEvent.getTab().close();
-            theControlEvent.getTab().setColorActive(new Color(0,45,90).getRGB());
+            theControlEvent.getTab().setColorActive(new Color(0, 45, 90).getRGB());
             id = theControlEvent.getId();
         } else if (theControlEvent.getId() != id && theControlEvent.isTab() || theControlEvent.isTab() && theControlEvent.getTab().isOpen() == false) {
             theControlEvent.getTab().open();
-            theControlEvent.getTab().setColorActive(new Color(0,170,255).getRGB());
+            theControlEvent.getTab().setColorActive(new Color(0, 170, 255).getRGB());
             id = theControlEvent.getId();
         }
 
         if (theControlEvent.isFrom("calibrate_bt") && webcam.isActive) {
             webcam.applyNormalize();
+        }
+
+        if (theControlEvent.isFrom("toggle_cam_bt")) {
+            toggle_cam_bt = !toggle_cam_bt;
+        }
+
+        if (theControlEvent.isFrom("toggle_out_bt")) {
+            toggle_out_bt = !toggle_out_bt;
         }
     }
 

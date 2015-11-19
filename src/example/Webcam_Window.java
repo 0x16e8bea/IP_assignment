@@ -37,7 +37,6 @@ public class Webcam_Window extends Window {
         ;
 
         return processImg.out;
-
     }
 
     public void display(PApplet applet) {
@@ -45,7 +44,4 @@ public class Webcam_Window extends Window {
         applet.image(video, bx, by);
 
     }
-
-
-
 }
