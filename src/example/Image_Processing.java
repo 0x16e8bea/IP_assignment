@@ -103,7 +103,7 @@ public class Image_Processing {
         return this;
     }
 
-    public Image_Processing dialation() {
+    public Image_Processing dilation() {
 
         convertToRGB(this.out);
 

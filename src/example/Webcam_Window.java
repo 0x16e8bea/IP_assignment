@@ -33,7 +33,7 @@ public class Webcam_Window extends Window {
                 .normalize()
                 .threshold()
                 .erosion()
-                .dialation()
+                .dilation()
         ;
 
         return processImg.out;
