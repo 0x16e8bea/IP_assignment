@@ -13,7 +13,7 @@ public class Main extends PApplet {
     Interface_Controller _interface = new Interface_Controller();
 
     public void setup() {
-        size(640, 480);
+        size(800, 600);
         noFill();
 
         // ControlP5
@@ -42,6 +42,7 @@ public class Main extends PApplet {
 
     public void mousePressed() {
         _interface.webcam.mousePressed(mouseX, mouseY, mouseButton);
+        _interface.output.mousePressed(mouseX, mouseY, mouseButton);
     }
 
     public void mouseDragged() {

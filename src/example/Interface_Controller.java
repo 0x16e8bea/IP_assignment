@@ -80,10 +80,12 @@ public class Interface_Controller {
 
         cp5.addToggle("toggle_cam_bt")
             .setLabel("TOGGLE CAMERA")
+                .linebreak()
         ;
 
         cp5.addToggle("toggle_out_bt")
                 .setLabel("TOGGLE OUTPUT")
+                .linebreak()
         ;
 
         cp5.end();
