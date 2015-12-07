@@ -7,16 +7,22 @@ package example;
 import processing.video.Capture;
 
 import java.awt.*;
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.FutureTask;
-import java.util.concurrent.RunnableFuture;
 
 public class Image_Processing {
 
+    final int vW, vH;
+    // Threshold values
+    public int sValue_R_min = 0;
+    public int sValue_R_max = 255;
+    public int sValue_G_min = 0;
+    public int sValue_G_max = 255;
+    public int sValue_B_min = 0;
+    public int sValue_B_max = 255;
     int[] out;
     Color[] c;
-    final int vW, vH;
+    int x;
+    int y;
+    int count;
 
     Image_Processing(Capture video) {
         this.c = new Color[video.pixels.length];
@@ -41,7 +47,9 @@ public class Image_Processing {
         return this;
     }
 
-        public Image_Processing normalize() {
+        //endregion
+
+    public Image_Processing normalize() {
 
         convertToRGB(this.out);
         for (int i = 0; i < this.out.length; i++) {
@@ -63,26 +71,18 @@ public class Image_Processing {
         return this;
     }
 
-    // Threshold values
-    public int sValue_R_min = 0;
-    public int sValue_R_max = 255;
-    public int sValue_G_min = 0;
-    public int sValue_G_max = 255;
-    public int sValue_B_min = 0;
-    public int sValue_B_max = 255;
-
     public Image_Processing threshold() {
 
         convertToRGB(this.out);
 
         for (int i = 0; i < c.length; i++) {
             if (
-                            this.c[i].getRed()      >=  sValue_R_min
-                            && this.c[i].getRed()   <  sValue_R_max
-                            && this.c[i].getGreen() >=  sValue_G_min
-                            && this.c[i].getGreen() <  sValue_G_max
-                            && this.c[i].getBlue()  >=  sValue_B_min
-                            && this.c[i].getBlue()  <  sValue_B_max
+                    this.c[i].getRed() >= sValue_R_min
+                            && this.c[i].getRed() < sValue_R_max
+                            && this.c[i].getGreen() >= sValue_G_min
+                            && this.c[i].getGreen() < sValue_G_max
+                            && this.c[i].getBlue() >= sValue_B_min
+                            && this.c[i].getBlue() < sValue_B_max
                     ) {
                 this.out[i] = Color.white.getRGB();
             } else
@@ -106,14 +106,9 @@ public class Image_Processing {
 
     }
 
-        //endregion
-
     //region NEIGHBOURHOOD_PROCESSING
-    public Image_Processing erosion(final int radius) throws ExecutionException, InterruptedException {
+    public Image_Processing erosion(final int radius) {
 
-        RunnableFuture f = new FutureTask(new Callable<int[]>() {
-            @Override
-            public int[] call() throws Exception {
                 convertToRGB(out);
 
                 for (int j = radius/2; j < vH - radius/2; j++) {
@@ -128,20 +123,12 @@ public class Image_Processing {
                         }
 
                         if (sum >= 255 * Math.pow(radius,2)) {
-                            out[i + j * vW] = Color.white.getRGB();
+                            this.out[i + j * vW] = Color.white.getRGB();
                         }
                         else
-                            out[i + j * vW] = Color.black.getRGB();
+                            this.out[i + j * vW] = Color.black.getRGB();
                     }
                 }
-                return out;
-            }
-            // implement call
-        });
-
-        new Thread(f).start();
-
-        this.out = (int[])f.get();
 
 
 
@@ -172,6 +159,35 @@ public class Image_Processing {
 
         return this;
     }
+
+    public Image_Processing centroid() {
+
+        int sumX = 0;
+        int sumY = 0;
+        int count = 0;
+
+
+        for (int j = 0; j < vH; j++) {
+            for (int i = 0; i < vW; i++) {
+                if (out[i + j * vW] == Color.white.getRGB()) {
+                    sumX += i;
+                    sumY += j;
+                    count++;
+                }
+            }
+        }
+
+        if (count > 0) {
+
+            x = sumX / count;
+            y = sumY / count;
+
+            this.count = count;
+        }
+
+        return this;
+    }
+
 
     //endregion
 

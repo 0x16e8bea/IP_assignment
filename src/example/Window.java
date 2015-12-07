@@ -16,6 +16,8 @@ public class Window {
     boolean animate = true;
     boolean overBox = false;
 
+    PApplet pApplet;
+
     public void draggable(PApplet pApplet) {
         pApplet.pushStyle();
 

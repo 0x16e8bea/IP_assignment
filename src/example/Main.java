@@ -1,8 +1,8 @@
 package example;
 
-import processing.core.*;
-import processing.video.*;
-import controlP5.*;
+import controlP5.ControlEvent;
+import processing.core.PApplet;
+import processing.video.Capture;
 
 import java.util.concurrent.ExecutionException;
 
@@ -28,14 +28,9 @@ public class Main extends PApplet {
         scale(2);
         popMatrix();
 
-        try {
-            _interface.window_handler();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        _interface.window_handler();
 
+        //System.out.println(frameRate);
     }
 
     public void controlEvent(ControlEvent theControlEvent) throws ExecutionException, InterruptedException {
