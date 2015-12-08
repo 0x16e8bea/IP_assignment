@@ -15,21 +15,25 @@ public class Interface_Controller {
     PApplet pApplet;
     ControlP5 cp5;
 
-    Webcam_Window webcam = new Webcam_Window();
+    Webcam_Window webcam;
     Output_Window output = new Output_Window();
+
     //endregion
 
     //region PRIMITIVES
     int id;
 
-    boolean toggle_cam_bt = false;
-    boolean toggle_out_bt = false;
+    boolean toggle_frameRate_bt = false;
+
+
     //endregion
 
     public void init(PApplet pApplet) {
 
         this.pApplet = pApplet;
         cp5 = new ControlP5(pApplet);
+
+        webcam = new Webcam_Window(pApplet, cp5, 320, 240, 100, 100);
 
         //region TABS
         // Add interface components
@@ -86,20 +90,8 @@ public class Interface_Controller {
         //region WEBCAM_TAB_CTRL
         cp5.begin(10, 30);
 
-        cp5.addButton("calibrate_bt")
-                .setLabel("CALIBRATE")
-                .setValue(0)
-                .linebreak()
-        ;
-
-
-        cp5.addToggle("toggle_cam_bt")
-                .setLabel("TOGGLE CAMERA")
-                .linebreak()
-        ;
-
-        cp5.addToggle("toggle_out_bt")
-                .setLabel("TOGGLE OUTPUT")
+        cp5.addButton("start_btn")
+                .setLabel("START WEBCAM")
                 .linebreak()
         ;
 
@@ -123,42 +115,29 @@ public class Interface_Controller {
         //endregion
 
         //region ARRANGE_TAB_CTRL
-        cp5.getController("toggle_cam_bt").moveTo("WEBCAM");
-        cp5.getController("toggle_out_bt").moveTo("WEBCAM");
-        cp5.getController("calibrate_bt").moveTo("WEBCAM");
+        cp5.getController("start_btn").moveTo("WEBCAM");
+
         cp5.getController("toggle_frameRate_bt").moveTo("SETTINGS");
         cp5.getController("toggle_animation_bt").moveTo("SETTINGS");
-        //endregion
 
+        //endregion
     }
 
     public void window_handler() {
 
-        if (webcam.isActive == false && toggle_cam_bt == true) {
-            webcam.start(pApplet, 320, 240, 100, 100);
-        } else if (webcam.isActive == true && toggle_cam_bt == false) {
-            webcam.video.stop();
-            webcam.isActive = false;
-        }
+        webcam.display();
 
-        if (toggle_cam_bt == true) {
-            webcam.display(pApplet);
-            webcam.draggable(pApplet);
+        if (toggle_frameRate_bt) {
+            pApplet.text(pApplet.frameRate, 0, pApplet.displayWidth - 10);
         }
-
-        if (output.isActive == false && toggle_out_bt == true) {
-            output.start(pApplet, 320, 240, 100, 100);
-            output.isActive = true;
-        }
-
-        if (toggle_out_bt == true && webcam.isActive == true) {
-            output.display(pApplet, webcam.applyNormalize());
-            output.draggable(pApplet);
-        }
-
     }
 
     public void controlEvent(ControlEvent theControlEvent) {
+        /**
+         * Calls close on a specific tab if it is open and clicked on by the mouse. Does the opposite if the tab is
+         * not currently active.
+         */
+
         if (theControlEvent.isTab() && theControlEvent.getTab().isOpen() == true && theControlEvent.getId() == id) {
             theControlEvent.getTab().close();
             theControlEvent.getTab().setColorActive(new Color(0, 45, 90).getRGB());
@@ -169,17 +148,31 @@ public class Interface_Controller {
             id = theControlEvent.getId();
         }
 
-        if (theControlEvent.isFrom("calibrate_bt") && webcam.isActive) {
-            webcam.applyNormalize();
+        if (theControlEvent.isFrom("start_btn")) {
+            webcam.isActive = true;
         }
 
-        if (theControlEvent.isFrom("toggle_cam_bt")) {
-            toggle_cam_bt = !toggle_cam_bt;
+        if (theControlEvent.isFrom("x_btn")) {
+            webcam.isActive = false;
         }
 
-        if (theControlEvent.isFrom("toggle_out_bt")) {
-            toggle_out_bt = !toggle_out_bt;
+        if (theControlEvent.isFrom("toggle_frameRate_btn")) {
+            toggle_frameRate_bt = !toggle_frameRate_bt;
         }
+
+        if (theControlEvent.isFrom("calibrate_btn")) {
+            webcam.histogram.isActive = true;
+        }
+
+        if (theControlEvent.isFrom("hsb_range")) {
+            // min and max values are stored in an array.
+            // access this array with controller().arrayValue().
+            // min is at index 0, max is at index 1.
+            webcam.histogram.range_min = (int)(theControlEvent.getController().getArrayValue(0));
+            webcam.histogram.range_max = (int)(theControlEvent.getController().getArrayValue(1));
+        }
+
+
     }
 
     public ControlFrame addControlFrame(String theName, int theWidth, int theHeight) {

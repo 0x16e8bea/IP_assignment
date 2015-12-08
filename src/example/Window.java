@@ -1,5 +1,6 @@
 package example;
 
+import controlP5.ControlP5;
 import processing.core.PApplet;
 
 /**
@@ -10,54 +11,23 @@ public class Window {
     public int bx, by, bw, bh;
     public int xCenter, yCenter;
     float alpha = 0;
+    ControlP5 cp5;
+
 
     boolean isActive = false;
+    boolean isVisible = false;
+
     boolean locked = false;
-    boolean animate = true;
     boolean overBox = false;
 
-    public void draggable(PApplet pApplet) {
-        pApplet.pushStyle();
+    PApplet pApplet;
 
+    public void draggable() {
         if (pApplet.mouseX > bx && pApplet.mouseX < bx + bw &&
-                pApplet.mouseY > by && pApplet.mouseY < by + bh) {
+                pApplet.mouseY > by - 17 && pApplet.mouseY < by + bh) {
             overBox = true;
         } else {
             overBox = false;
-        }
-
-        pApplet.stroke(0, 170, 255);
-
-        if (animate == true)
-            animate(pApplet);
-
-        // Draw the box
-        pApplet.rect(bx, by, bw, bh);
-        pApplet.popStyle();
-
-    }
-
-    public void animate(PApplet pApplet) {
-
-        if (overBox == true) {
-
-                pApplet.fill(0, 170, 255, alpha);
-
-            if (pApplet.mousePressed == true) {
-                if (alpha < 150)
-                    alpha += 8;
-            } else {
-                if (alpha <= 50)
-                    alpha += 4;
-                else {
-                    if (alpha > 50)
-                        alpha -= 1 + alpha / 10;
-                }
-            }
-        } else {
-            if (alpha > 0)
-                alpha -= alpha / 4 + 1;
-            pApplet.fill(0, 170, 255, alpha);
         }
     }
 
@@ -66,12 +36,10 @@ public class Window {
 
         xCenter = mouseX - (bx + bw / 2);
         yCenter = mouseY - (by + bh / 2);
-
     }
 
     public void mouseDragged(int mouseX, int mouseY) {
         if (locked && overBox == true) {
-
 
             this.bx = mouseX - xCenter - bw / 2;
             this.by = mouseY - yCenter - bh / 2;

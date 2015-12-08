@@ -39,7 +39,7 @@ public class Image_Processing {
         }
     }
 
-    public Image_Processing run(int[] c) {
+    public Image_Processing init(int[] c) {
         this.out = c.clone();
         return this;
     }
