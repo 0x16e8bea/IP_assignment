@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="505a5d02-7a9c-4dff-948d-597d791457fe" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/example/Histogram_Window.java" afterPath="$PROJECT_DIR$/src/example/Histogram_Window.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/example/Interface_Controller.java" afterPath="$PROJECT_DIR$/src/example/Interface_Controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IP assignment/example/Interface_Controller.class" afterPath="$PROJECT_DIR$/out/production/IP assignment/example/Interface_Controller.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/example/Webcam_Window.java" afterPath="$PROJECT_DIR$/src/example/Webcam_Window.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="IP assignment.iws" />
@@ -42,10 +42,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Interface_Controller.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Interface_Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/example/Interface_Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5993031" vertical-offset="1900" max-vertical-offset="3400">
+            <state vertical-scroll-proportion="16.551723" vertical-offset="2724" max-vertical-offset="3400">
               <caret line="132" column="57" selection-start-line="132" selection-start-column="57" selection-end-line="132" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -54,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Webcam_Window.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Webcam_Window.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/example/Webcam_Window.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.068966" vertical-offset="1160" max-vertical-offset="2193">
-              <caret line="115" column="8" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.71777004" vertical-offset="778" max-vertical-offset="2193">
+              <caret line="74" column="44" selection-start-line="74" selection-start-column="44" selection-end-line="74" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -157,10 +157,10 @@
         <option value="$PROJECT_DIR$/src/example/Histrogram_Window.java" />
         <option value="$PROJECT_DIR$/src/example/Main.java" />
         <option value="$PROJECT_DIR$/src/example/Output_Window.java" />
-        <option value="$PROJECT_DIR$/src/example/Webcam_Window.java" />
         <option value="$PROJECT_DIR$/src/example/Image_Processing.java" />
         <option value="$PROJECT_DIR$/src/example/Histogram_Window.java" />
         <option value="$PROJECT_DIR$/src/example/Interface_Controller.java" />
+        <option value="$PROJECT_DIR$/src/example/Webcam_Window.java" />
       </list>
     </option>
   </component>
@@ -573,7 +573,7 @@
       <workItem from="1447859844058" duration="23911000" />
       <workItem from="1447898857466" duration="1660000" />
       <workItem from="1447952435130" duration="6199000" />
-      <workItem from="1449503177397" duration="32443000" />
+      <workItem from="1449503177397" duration="32713000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed button layout and added exit and calibrate-buttons which closes #6">
       <created>1447726637190</created>
@@ -611,11 +611,17 @@
       <option name="project" value="LOCAL" />
       <updated>1449537177024</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="BLablabla">
+      <created>1449538663461</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1449538663461</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101847000" />
+    <option name="totallyTimeSpent" value="102117000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -696,7 +702,8 @@
     <MESSAGE value="Fixed bug with the Output_Window. This closes #7" />
     <MESSAGE value="Added more filters (threshold, erosion, dilation)" />
     <MESSAGE value="Changes blabla" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes blabla" />
+    <MESSAGE value="BLablabla" />
+    <option name="LAST_COMMIT_MESSAGE" value="BLablabla" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1185,11 +1192,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/example/Webcam_Window.java">
+    <entry file="file://$PROJECT_DIR$/src/example/Interface_Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.068966" vertical-offset="1160" max-vertical-offset="2193">
-          <caret line="115" column="8" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="8" />
-          <folding />
+        <state vertical-scroll-proportion="16.551723" vertical-offset="2724" max-vertical-offset="3400">
+          <caret line="132" column="57" selection-start-line="132" selection-start-column="57" selection-end-line="132" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1203,13 +1212,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/example/Interface_Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/example/Webcam_Window.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5993031" vertical-offset="1900" max-vertical-offset="3400">
-          <caret line="132" column="57" selection-start-line="132" selection-start-column="57" selection-end-line="132" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.71777004" vertical-offset="778" max-vertical-offset="2193">
+          <caret line="74" column="44" selection-start-line="74" selection-start-column="44" selection-end-line="74" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -72,7 +72,7 @@ public class Webcam_Window extends Window {
         update();
 
         if (histogram.isActive) {
-            histogram.display(video.pixels);
+            histogram.display(applyFilters());
         }
 
         if (isActive && !isVisible) {
