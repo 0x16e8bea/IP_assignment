@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="505a5d02-7a9c-4dff-948d-597d791457fe" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/example/Histogram_Window.java" />
-      <change type="DELETED" beforePath="C:\Users\Mikkel\IdeaProjects\IP_assignment\.idea\libraries\controlP5.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IP assignment/example/Interface_Controller.class" afterPath="$PROJECT_DIR$/out/production/IP assignment/example/Interface_Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IP assignment/example/Main.class" afterPath="$PROJECT_DIR$/out/production/IP assignment/example/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IP assignment/example/Window.class" afterPath="$PROJECT_DIR$/out/production/IP assignment/example/Window.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/example/Image_Processing.java" afterPath="$PROJECT_DIR$/src/example/Image_Processing.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/example/Histogram_Window.java" afterPath="$PROJECT_DIR$/src/example/Histogram_Window.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/example/Interface_Controller.java" afterPath="$PROJECT_DIR$/src/example/Interface_Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/example/Main.java" afterPath="$PROJECT_DIR$/src/example/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/example/Output_Window.java" afterPath="$PROJECT_DIR$/src/example/Output_Window.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/example/Webcam_Window.java" afterPath="$PROJECT_DIR$/src/example/Webcam_Window.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/example/Window.java" afterPath="$PROJECT_DIR$/src/example/Window.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="IP assignment.iws" />
@@ -42,8 +33,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/example/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.75862" vertical-offset="565" max-vertical-offset="1139">
-              <caret line="57" column="35" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
+            <state vertical-scroll-proportion="-5.137931" vertical-offset="361" max-vertical-offset="1139">
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Interface_Controller.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Interface_Controller.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/example/Interface_Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2393" max-vertical-offset="3332">
-              <caret line="166" column="40" selection-start-line="166" selection-start-column="40" selection-end-line="166" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.5993031" vertical-offset="1900" max-vertical-offset="3400">
+              <caret line="132" column="57" selection-start-line="132" selection-start-column="57" selection-end-line="132" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -66,7 +57,7 @@
       <file leaf-file-name="Webcam_Window.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/example/Webcam_Window.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.24138" vertical-offset="1619" max-vertical-offset="2193">
+            <state vertical-scroll-proportion="-25.068966" vertical-offset="1160" max-vertical-offset="2193">
               <caret line="115" column="8" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="8" />
               <folding />
             </state>
@@ -97,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Histogram_Window.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Histogram_Window.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/example/Histogram_Window.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.5787728" vertical-offset="51" max-vertical-offset="1904">
-              <caret line="59" column="50" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1904">
+              <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -112,8 +103,8 @@
       <file leaf-file-name="Image_Processing.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/example/Image_Processing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.62069" vertical-offset="0" max-vertical-offset="2431">
-              <caret line="42" column="12" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="12" />
+            <state vertical-scroll-proportion="-2.9310346" vertical-offset="204" max-vertical-offset="2431">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="22" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -162,14 +153,14 @@
         <option value="$PROJECT_DIR$/src/example/Neighbourhood_Processing.java" />
         <option value="$PROJECT_DIR$/src/example/Point_Processing.java" />
         <option value="$PROJECT_DIR$/src/example/Draw_Window.java" />
-        <option value="$PROJECT_DIR$/src/example/Image_Processing.java" />
         <option value="$PROJECT_DIR$/src/example/Window.java" />
         <option value="$PROJECT_DIR$/src/example/Histrogram_Window.java" />
         <option value="$PROJECT_DIR$/src/example/Main.java" />
         <option value="$PROJECT_DIR$/src/example/Output_Window.java" />
-        <option value="$PROJECT_DIR$/src/example/Interface_Controller.java" />
         <option value="$PROJECT_DIR$/src/example/Webcam_Window.java" />
+        <option value="$PROJECT_DIR$/src/example/Image_Processing.java" />
         <option value="$PROJECT_DIR$/src/example/Histogram_Window.java" />
+        <option value="$PROJECT_DIR$/src/example/Interface_Controller.java" />
       </list>
     </option>
   </component>
@@ -582,7 +573,7 @@
       <workItem from="1447859844058" duration="23911000" />
       <workItem from="1447898857466" duration="1660000" />
       <workItem from="1447952435130" duration="6199000" />
-      <workItem from="1449503177397" duration="30963000" />
+      <workItem from="1449503177397" duration="32443000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed button layout and added exit and calibrate-buttons which closes #6">
       <created>1447726637190</created>
@@ -614,11 +605,17 @@
       <option name="project" value="LOCAL" />
       <updated>1447898154815</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Changes blabla">
+      <created>1449537177024</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1449537177024</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100367000" />
+    <option name="totallyTimeSpent" value="101847000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -698,7 +695,8 @@
     <MESSAGE value="Added some point processing filters. &#10;Added a Output_Window class (buggy) &#10;&#10;Bug: &#10;The output window is draggable, but when dragging the center of the window jumps to the mouse position." />
     <MESSAGE value="Fixed bug with the Output_Window. This closes #7" />
     <MESSAGE value="Added more filters (threshold, erosion, dilation)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added more filters (threshold, erosion, dilation)" />
+    <MESSAGE value="Changes blabla" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes blabla" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1149,18 +1147,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/example/Image_Processing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.62069" vertical-offset="0" max-vertical-offset="2431">
-          <caret line="42" column="12" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="12" />
+        <state vertical-scroll-proportion="-2.9310346" vertical-offset="204" max-vertical-offset="2431">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="22" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/example/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/example/Histogram_Window.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.75862" vertical-offset="565" max-vertical-offset="1139">
-          <caret line="57" column="35" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1904">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/example/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.9459457" vertical-offset="335" max-vertical-offset="952">
+          <caret line="37" column="35" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1177,38 +1185,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/example/Interface_Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2393" max-vertical-offset="3332">
-          <caret line="166" column="40" selection-start-line="166" selection-start-column="40" selection-end-line="166" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/example/Webcam_Window.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.24138" vertical-offset="1619" max-vertical-offset="2193">
+        <state vertical-scroll-proportion="-25.068966" vertical-offset="1160" max-vertical-offset="2193">
           <caret line="115" column="8" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/example/Window.java">
+    <entry file="file://$PROJECT_DIR$/src/example/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.9459457" vertical-offset="335" max-vertical-offset="952">
-          <caret line="37" column="35" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="35" />
+        <state vertical-scroll-proportion="-5.137931" vertical-offset="361" max-vertical-offset="1139">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/example/Histogram_Window.java">
+    <entry file="file://$PROJECT_DIR$/src/example/Interface_Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5787728" vertical-offset="51" max-vertical-offset="1904">
-          <caret line="59" column="50" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.5993031" vertical-offset="1900" max-vertical-offset="3400">
+          <caret line="132" column="57" selection-start-line="132" selection-start-column="57" selection-end-line="132" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

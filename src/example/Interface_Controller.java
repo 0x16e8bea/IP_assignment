@@ -23,7 +23,7 @@ public class Interface_Controller {
     //region PRIMITIVES
     int id;
 
-    boolean toggle_frameRate_bt = false;
+    boolean toggle_frameRate_bt;
 
 
     //endregion
@@ -128,7 +128,10 @@ public class Interface_Controller {
         webcam.display();
 
         if (toggle_frameRate_bt) {
-            pApplet.text(pApplet.frameRate, 0, pApplet.displayWidth - 10);
+            pApplet.pushStyle();
+            pApplet.fill(255);
+            pApplet.text("FPS: " + pApplet.frameRate, 115, 10);
+            pApplet.popStyle();
         }
     }
 
@@ -165,11 +168,12 @@ public class Interface_Controller {
         }
 
         if (theControlEvent.isFrom("hsb_range")) {
-            // min and max values are stored in an array.
-            // access this array with controller().arrayValue().
-            // min is at index 0, max is at index 1.
             webcam.histogram.range_min = (int)(theControlEvent.getController().getArrayValue(0));
             webcam.histogram.range_max = (int)(theControlEvent.getController().getArrayValue(1));
+        }
+
+        if (theControlEvent.isFrom("toggle_frameRate_bt")) {
+            toggle_frameRate_bt = !toggle_frameRate_bt;
         }
 
 

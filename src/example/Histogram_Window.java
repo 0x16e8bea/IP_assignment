@@ -16,8 +16,8 @@ public class Histogram_Window extends Window {
     OpenCV openCV;
     int color = 1;
 
-    public int range_min = 10;
-    public int range_max = 100;
+    public int range_min = 100;
+    public int range_max = 150;
 
     Histogram histogram;
 
@@ -43,7 +43,7 @@ public class Histogram_Window extends Window {
                 .setSize(bw, 20)
                 .setHandleSize(20)
                 .setRange(0, 255)
-                .setRangeValues(50, 100)
+                .setRangeValues(range_min, range_max)
                 .setBroadcast(true)
                 .hide();
 
