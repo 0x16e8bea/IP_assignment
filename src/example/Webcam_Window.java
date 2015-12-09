@@ -47,7 +47,7 @@ public class Webcam_Window extends Window {
 
         cp5.addButton("x_btn")
                 .setLabel("X")
-                .setSize(25,15)
+                .setSize(iw,ih)
                 .hide();
 
         cp5.getGroup("option_group").moveTo("global");
@@ -93,26 +93,20 @@ public class Webcam_Window extends Window {
 
     public void update() {
         draggable();
-        drawInterface();
+        drawBar();
 
-        pApplet.pushStyle();
-        pApplet.fill(0, 72, 145);
-        pApplet.stroke(0, 72, 145);
-        pApplet.rect(bx - 1, by - cp5.getController("x_btn").getHeight() - 3, bw + 1, cp5.getController("x_btn").getHeight() + bh + 3);
-        pApplet.popStyle();
+        cp5.begin();
+        cp5.getGroup("option_group").setPosition(bx, by + bh + cp5.getGroup("option_group").getHeight());
+        cp5.end();
+
+        cp5.begin();
+        cp5.getController("x_btn").setPosition(bx + bw - cp5.getController("x_btn").getWidth(), by - cp5.getController("x_btn").getHeight());
+        cp5.end();
 
         pApplet.image(video, bx, by);
     }
 
-    public void drawInterface() {
-        cp5.begin();
-        cp5.getGroup("option_group").setPosition(bx, by + bh + cp5.getGroup("option_group").getHeight() + 2);
-        cp5.end();
 
-        cp5.begin();
-        cp5.getController("x_btn").setPosition(bx + bw - cp5.getController("x_btn").getWidth(), by - cp5.getController("x_btn").getHeight() - 2);
-        cp5.end();
-    }
         public Webcam_Window debugBrightestPoint() {
         PVector loc = openCV.max();
         pApplet.pushStyle();

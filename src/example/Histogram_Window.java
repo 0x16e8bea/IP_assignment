@@ -1,7 +1,6 @@
 package example;
 
 import controlP5.ControlP5;
-import controlP5.Group;
 import gab.opencv.Histogram;
 import gab.opencv.OpenCV;
 import processing.core.PApplet;
@@ -56,6 +55,8 @@ public class Histogram_Window extends Window {
 
     public void display(int[] c) {
 
+        drawBar();
+
         if (isActive)
             cp5.getController("hsb_range").show();
 
@@ -78,6 +79,7 @@ public class Histogram_Window extends Window {
         pApplet.image(openCV.getOutput(), bx, by);
 
         draggable();
+
 
         update_interface();
         update_histogram();
