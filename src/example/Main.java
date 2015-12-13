@@ -1,53 +1,84 @@
 package example;
 
-import gab.opencv.OpenCV;
-import processing.core.*;
-import processing.video.*;
-import controlP5.*;
+import controlP5.ControlEvent;
+import processing.core.PApplet;
+import processing.video.Capture;
+
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class Main extends PApplet {
 
-    Interface_Controller _interface = new Interface_Controller();
+    InterfaceHandler _interface;
+    public static ArrayList<EventHandler> eventListeners = new ArrayList<EventHandler>();
+
+    public static void main(String args[]) {
+        PApplet.main(new String[]{"--present", "Main"});
+    }
 
     public void setup() {
-        size(displayWidth, displayHeight);
+        // Setup window to the size of the screen
+        size(displayWidth, displayHeight, P3D);
         noFill();
         noStroke();
 
+
         // ControlP5
-        _interface.init(this);
+        _interface = new InterfaceHandler(this);
+        eventListeners.add(_interface);
     }
 
     public void draw() {
         background(0, 10, 30);
-        _interface.window_handler();
-    }
-
-    public void controlEvent(ControlEvent theControlEvent) {
-        _interface.controlEvent(theControlEvent);
+        _interface.update();
     }
 
     public void captureEvent(Capture c) {
         c.read();
     }
 
-    // Should be optimized
-    public void mousePressed() {
-        _interface.webcam.mousePressed(mouseX, mouseY);
-        _interface.output.mousePressed(mouseX, mouseY);
-        _interface.webcam.histogram.mousePressed(mouseX, mouseY);
+    public static Iterator<EventHandler> it;
+
+    public static List<EventHandler> thingsToAdd = new ArrayList<EventHandler>();
+    public static List<EventHandler> thingsToRemove = new ArrayList<EventHandler>();
+
+    public void controlEvent(ControlEvent theControlEvent) {
+        for (EventHandler ec : eventListeners) {
+            ec.controlEvent(theControlEvent);
+        }
+        eventListeners.addAll(thingsToAdd);
+        eventListeners.removeAll(thingsToRemove);
+        thingsToAdd.clear();
+        thingsToRemove.clear();
     }
 
-    // Should be optimized
-    public void mouseDragged() {
-        _interface.webcam.mouseDragged(mouseX, mouseY);
-        _interface.output.mouseDragged(mouseX, mouseY);
-        _interface.webcam.histogram.mouseDragged(mouseX, mouseY);
+    public void mouseClicked() {
+        for (EventHandler ec : eventListeners) {
+            ec.mouseClicked();
+        }
     }
 
     public void mouseReleased() {
-        _interface.webcam.mouseReleased();
-        _interface.output.mouseReleased();
-        _interface.webcam.histogram.mouseReleased();
+        for (EventHandler ec : eventListeners) {
+            ec.mouseReleased();
+        }
+    }
+
+    public void mousePressed() {
+        for (EventHandler ec: eventListeners) {
+            ec.mousePressed();
+        }
+      }
+
+    public void mouseDragged() {
+        for (EventHandler ec: eventListeners) {
+            ec.mouseDragged();
+        }
+        eventListeners.addAll(thingsToAdd);
+        eventListeners.removeAll(thingsToRemove);
+        thingsToAdd.clear();
+        thingsToRemove.clear();
     }
 }

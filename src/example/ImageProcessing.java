@@ -8,7 +8,7 @@ import processing.video.Capture;
 
 import java.awt.*;
 
-public class Image_Processing {
+public class ImageProcessing {
 
     int[] out;
     Color[] c;
@@ -22,7 +22,7 @@ public class Image_Processing {
     public int sValue_G_max = 255;
     public int sValue_B_max = 255;
 
-    Image_Processing(Capture video) {
+    ImageProcessing(Capture video) {
         this.c = new Color[video.pixels.length];
         this.vW = video.width;
         this.vH = video.height;
@@ -39,12 +39,12 @@ public class Image_Processing {
         }
     }
 
-    public Image_Processing init(int[] c) {
+    public ImageProcessing init(int[] c) {
         this.out = c.clone();
         return this;
     }
 
-    public Image_Processing normalize() {
+    public ImageProcessing normalize() {
 
         convertToRGB(this.out);
         for (int i = 0; i < this.out.length; i++) {
@@ -66,7 +66,7 @@ public class Image_Processing {
         return this;
     }
 
-    public Image_Processing threshold() {
+    public ImageProcessing threshold() {
 
         convertToRGB(this.out);
 
@@ -85,7 +85,7 @@ public class Image_Processing {
         return this;
     }
 
-    public Image_Processing erosion() {
+    public ImageProcessing erosion() {
 
         convertToRGB(this.out);
 
@@ -110,7 +110,7 @@ public class Image_Processing {
         return this;
     }
 
-    public Image_Processing dilation() {
+    public ImageProcessing dilation() {
 
         convertToRGB(this.out);
 

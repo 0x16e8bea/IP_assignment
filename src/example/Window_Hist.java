@@ -1,6 +1,6 @@
 package example;
 
-import controlP5.ControlP5;
+import controlP5.ControlEvent;
 import gab.opencv.Histogram;
 import gab.opencv.OpenCV;
 import processing.core.PApplet;
@@ -9,37 +9,38 @@ import processing.core.PImage;
 /**
  * Created by Mikkel on 07-Dec-15.
  */
-public class Histogram_Window extends Window {
+public class Window_Hist extends Window {
 
     PImage img;
     OpenCV openCV;
     int color = 1;
+    int[] c;
 
     public int range_min = 100;
     public int range_max = 150;
 
     Histogram histogram;
 
-    Histogram_Window(PApplet pApplet, ControlP5 cp5, int vW, int vH, int x, int y) {
+    Window_Hist(PApplet pApplet, int[] c, int vW, int vH, int x, int y) {
 
-        this.pApplet = pApplet;
+        super(pApplet);
 
-        this.bw = vW;
-        this.bh = vH;
-        this.bx = x;
-        this.by = y;
+        this.bW = vW;
+        this.bH = vH;
+        this.bX = x;
+        this.bY = y;
+        this.c = c;
 
         img = new PImage(vW, vH);
-        openCV = new OpenCV(pApplet, bw, bh);
+        openCV = new OpenCV(pApplet, bW, bH);
 
-        // ControlP5
-        this.cp5 = cp5;
+        cp5.getController("bar").setLabel("HISTOGRAM_WINDOW_ID: " + id);
 
         cp5.begin();
         cp5.addRange("hsb_range")
                 .setBroadcast(false)
                 .setPosition(0, 480)
-                .setSize(bw, 20)
+                .setSize(bW, 20)
                 .setHandleSize(20)
                 .setRange(0, 255)
                 .setRangeValues(range_min, range_max)
@@ -53,13 +54,11 @@ public class Histogram_Window extends Window {
 
     }
 
-    public void display(int[] c) {
+    public void update() {
 
-        drawBar();
+        super.update();
 
-        if (isActive)
-            cp5.getController("hsb_range").show();
-
+        cp5.getController("hsb_range").show();
 
         img.loadPixels();
 
@@ -76,19 +75,10 @@ public class Histogram_Window extends Window {
         histogram = openCV.findHistogram(openCV.getH(), 255);
         openCV.inRange(range_min, range_max);
 
-        pApplet.image(openCV.getOutput(), bx, by);
+        pApplet.image(openCV.getOutput(), bX, bY);
 
-        draggable();
-
-
-        update_interface();
+        cp5.getController("hsb_range").setPosition(bX, bY + bH);
         update_histogram();
-
-    }
-
-    public void update_interface() {
-
-        cp5.getController("hsb_range").setPosition(bx, by + bh);
 
     }
 
@@ -98,11 +88,20 @@ public class Histogram_Window extends Window {
         pApplet.pushStyle();
 
         pApplet.fill(255, 0, 0);
-        histogram.draw(bx, by, bw, bh);
+        histogram.draw(bX, bY, bW, bH);
         pApplet.fill(0, 255, 0);
-
 
         pApplet.popStyle();
 
+    }
+
+    @Override
+    public void controlEvent(ControlEvent theControlEvent) {
+        super.controlEvent(theControlEvent);
+
+        if (theControlEvent.isFrom("hsb_range")) {
+            range_min = (int) (theControlEvent.getController().getArrayValue(0));
+            range_max = (int) (theControlEvent.getController().getArrayValue(1));
+        }
     }
 }
